@@ -1,0 +1,15 @@
+.projects-one__img-box{
+    padding-right: 50px;
+}
+
+@media (min-width: 1200px) {
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+    }
+}
+
+.project-two__single {
+    margin-bottom: 60px;
+    margin-right: 30px;
+}

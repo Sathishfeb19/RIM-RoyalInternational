@@ -1,0 +1,23 @@
+.about-one__progress-title:hover {
+    color: #000; 
+}  .about-one__img img {
+    // height: 300px; /* or any fixed height you prefer */
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+section{
+    background-color: #000;}
+
+    @media (max-width: 767px) {
+        .about-one__design-make-img {
+          text-align: center; 
+        }
+      
+        .about-one__design-make-img img {
+          display: inline-block; 
+          max-width: 100%; 
+          height: auto;
+          margin-left: 18%;
+        }
+      }

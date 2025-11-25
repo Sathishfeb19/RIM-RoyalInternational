@@ -1,0 +1,21 @@
+p{
+    text-align: justify;
+}
+
+.site-footer
+ {
+    position: relative;
+    display: block;
+    background-color: var(--tecture-black);
+    overflow: hidden;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.section-title__title {
+    color: var(--tecture-white);
+    font-size: 75px;
+    line-height: 64px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
