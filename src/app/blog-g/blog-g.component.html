@@ -1,128 +1,79 @@
 <div class="page-wrapper body-bg-color-1">
     <app-ipromise-header></app-ipromise-header>
-    <div class="stricky-header stricked-menu main-menu main-menu-two">
-        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-    </div><!-- /.stricky-header -->
 
-
-    <!--Page Header Start-->
-    <section class="page-header">
+    <!-- Page Header -->
+     <section class="page-header">
         <div class="section-shape-1" style="background-image: url(assets/images/shapes/section-shape-11.png);"></div>
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__title-box">
-                    <p>RIM</p>
-                    <h4>HOLY SPIRIT</h4>
+                    <p>Royal International Ministries</p>
+                    <h3>BLOG</h3>
                 </div>
                 <div class="thm-breadcrumb__box">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="">Home</a></li>
+                        <li><a href="">RIM</a></li>
                         <li><span>/</span></li>
-                        <li>HOLY SPIRIT</li>
+                        <li>BLOG</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!--Page Header End-->
 
+    <!-- Blog Details -->
     <section class="blog-details">
-        <div class="section-shape-1" style="background-image: url(assets/images/shapes/blog-details-sec-shape-1.png);">
-        </div>
         <div class="container">
             <div class="row">
+
+                <!-- LEFT CONTENT -->
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog-details__left">
-                        <div class="blog-details__img mt-3">
-                            <img src="assets/images/blog/3_THE HOLY SPIRIt.jpg" alt="">
-                        </div>
-                        <div class="blog-details__content">
-                            <div class="blog-details__meta-and-share">
-                                <ul class="blog-details__meta list-unstyled">
-                                    <li>
-                                        <a href="#"><span class="icon-user"></span>By Jithu C.S </a>
-                                    </li>
 
-                                </ul>
-                                <div class="blog-details__share" style="position: relative;">
-                                    <a href="#" onclick="copyCurrentURL(event)">
-                                      <span class="fas fa-share-alt"></span>
-                                    </a>
-                                    <span id="tooltip" style="
-                                        position: absolute;
-                                        top: -30px;
-                                        left: 50%;
-                                        transform: translateX(-50%);
-                                        background: #333;
-                                        color: #fff;
-                                        padding: 5px 10px;
-                                        border-radius: 4px;
-                                        font-size: 12px;
-                                        opacity: 0;
-                                        pointer-events: none;
-                                        transition: opacity 0.3s ease;
-                                      ">
-                                      Copied!
-                                    </span>
-                                  </div>
-                                  
+                        <!-- IMAGES -->
+                        <div *ngIf="images && images.length" class="mt-4">
+                            <div *ngFor="let img of images" class="mb-3">
+                                <img
+                                    [src]="img.base64 ? img.base64 : baseUrl + img.path"
+                                    class="img-fluid w-100"
+                                    style="object-fit: cover;"
+                                />
                             </div>
+                        </div>
 
-                        
-                            <h3 class="mt-3">   HOLY SPIRIT </h3>
+                        <!-- HTML CONTENT -->
+                        <div *ngIf="sanitizedData && sanitizedData.length" id="blogcontent">
+                            <div *ngFor="let report of sanitizedData" class="mb-3">
+                                <div [innerHTML]="report"></div>
+                            </div>
+                        </div>
 
-                          
+                        <!-- COMMENTS -->
+                        <app-rim-comments></app-rim-comments>
 
-                            <!-- <div class="blog-details__img mt-3">
-                                <img src="assets/images/blog/3_THE HOLY SPIRIT_Inside.jpg" alt="">
-                            </div> -->
-
-                            <h4 class="mt-3">    John 14:16-17 New King James Version </h4>
-
-                            <p class="blog-details__text-2 mt-3">  16 And I will pray the Father, and He will give you another Helper, that He may abide with you forever— 17 the Spirit of truth, whom the world cannot receive, because it neither sees Him nor knows Him; but you know Him, for He dwells with you and will be in you.
-                            </p>
-                            <h4 class="mt-3">         John 16:13-14 New King James Version </h4>
-                            <p class="blog-details__text-2 mt-3">       13 However, when He, the Spirit of truth, has come, He will guide you into all truth; for He will not speak on His own authority, but whatever He hears He will speak; and He will tell you things to come. 14 He will glorify Me, for He will take of what is Mine and declare it to you.
-                            </p>
-                            <h4 class="mt-3">      Acts 2:17-18 New King James Version </h4>
-
-                            <p class="blog-details__text-2 mt-3">       17 ‘And it shall come to pass in the last days, says God,
-                            That I will pour out of My Spirit on all flesh;
-                            Your sons and your daughters shall prophesy,
-                            Your young men shall see visions,
-                            Your old men shall dream dreams.
-                            18 And on My menservants and on My maidservants
-                            I will pour out My Spirit in those days;
-                            And they shall prophesy. </p>
-                            
-                            <p class="blog-details__text-2 mt-3">      God willing the Holy Spirit will anoint Jithu C.S to write in His time.
-                            </p>
-                          </div>
-
-                          <app-rim-comments></app-rim-comments>
                     </div>
                 </div>
+
+                <!-- RIGHT SIDEBAR -->
                 <div class="col-xl-4 col-lg-5">
                     <app-blog-side></app-blog-side>
 
-                    <div class="service-details__contact-box">
-                        <h3 class="service-details__title">PRAY FOR A TRUE REVIVAL</h3>
-                        <div class="service-details__icon">
-                       <img src="assets/images/icon/PRAY.png" style="width: 90px;">
-                        </div>
-                        <p class="service-details__text">PLEASE CLICK TO DOWNLOAD A FREE REVIVAL PRAYER MAP</p>
-                        <!-- <p class="service-details__number"><a href="tel:7034001777">+91 7034 001 777</a></p> -->
+                    <div class="service-details__contact-box text-center">
+                        <h3>PRAY FOR A TRUE REVIVAL</h3>
+                        <img src="assets/images/icon/PRAY.png" style="width:90px">
+                        <p>PLEASE CLICK TO DOWNLOAD A FREE REVIVAL PRAYER MAP</p>
                     </div>
 
                     <div class="service-details__download-box">
-                        <div class="icon">
-                            <span class="icon-download"></span>
-                        </div>
-                        <a href="assets/images/backgrounds/PRAYER _MAP.jpg" download>DOWNLOAD </a>
+                        <a href="assets/images/backgrounds/PRAYER_MAP.jpg" download>
+                            DOWNLOAD
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+
     <app-ipromise-footer></app-ipromise-footer>
 </div>

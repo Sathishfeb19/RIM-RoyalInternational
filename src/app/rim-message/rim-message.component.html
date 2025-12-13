@@ -1,4 +1,5 @@
 <div class="page-wrapper body-bg-color-1">
+
     <app-ipromise-header></app-ipromise-header>
 
     <section class="page-header">
@@ -20,129 +21,91 @@
         </div>
     </section>
 
-    <!--Blog Details Start-->
     <section class="blog-details">
-        <div class="section-shape-1" style="background-image: url(assets/images/shapes/blog-details-sec-shape-1.png);">
-        </div>
+        <div class="section-shape-1" style="background-image: url(assets/images/shapes/blog-details-sec-shape-1.png);"></div>
+
         <div class="auto-container">
             <div class="row">
+
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog-page-content">
-                    
 
+                        <!-- PAGINATED BLOG ITEMS -->
+                        @for (usr of paginatedData; track usr) {
                         <div class="blog-two-single">
+
                             <div class="img-box">
-                                <img src="assets/images/blog/1_ABBAFATHER.jpg" alt="Image">
+                                <img src="{{usr.imagePath}}" alt="Image" height="560">
                             </div>
+
                             <div class="content-box">
                                 <div class="meta-box">
                                     <div class="date-box">
-                                        <h3>07</h3>
-                                        <p>JULY 2025</p>
+                                        <p>{{usr.created_date}}</p>
                                     </div>
+
                                     <ul class="meta-info list-unstyled">
                                         <li>
                                             <a href="#">
                                                 <span class="icon-user"></span>
-                                                JITHU JCS
+                                                JITHU CS
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
+
                                 <div class="title-box">
                                     <h3>
-                                        <a href="abba-father">
-                                            ABBA FATHER</a>
+                                        <a href="blog/{{usr.USER_NAME}}">
+                                            {{usr.USER_NAME}}
+                                        </a>
                                     </h3>
                                 </div>
 
                                 <div class="btn-box">
-                                    <a href="abba-father" class="thm-btn">
-                                        OPEN
-                                        <span class="icon-up-right-arrow"></span>
+                                    <a href="blog/{{usr.USER_NAME}}" class="thm-btn">
+                                        OPEN <span class="icon-up-right-arrow"></span>
                                     </a>
                                 </div>
+
                             </div>
                         </div>
+                        }
 
-                        <div class="blog-two-single">
-                            <div class="img-box">
-                                <img src="assets/images/blog/2_JESUS.jpg" alt="Image">
-                            </div>
-                            <div class="content-box">
-                                <div class="meta-box">
-                                    <div class="date-box">
-                                        <h3>07</h3>
-                                        <p>JULY 2025</p>
-                                    </div>
-                                    <ul class="meta-info list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                <span class="icon-user"></span>
-                                                JITHU JCS
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="title-box">
-                                    <h3>
-                                        <a href="jesus-christ">
-                                            JESUS CHRIST</a>
-                                    </h3>
-                                </div>
+                        <!-- PAGINATION BUTTONS -->
+                        <div class="pagination mt-4 text-center">
 
-                                <div class="btn-box">
-                                    <a href="jesus-christ" class="thm-btn">
-                                        OPEN
-                                        <span class="icon-up-right-arrow"></span>
-                                    </a>
-                                </div>
-                            </div>
+                            <button 
+                                (click)="prevPage()" 
+                                [disabled]="page === 1"
+                                class="btn btn-primary mx-2">
+                                Prev
+                            </button>
+
+                            <span class="mx-3">Page {{ page }}</span>
+
+                            <button 
+                                (click)="nextPage()" 
+                                [disabled]="(page * pageSize) >= Product.length"
+                                class="btn btn-primary mx-2">
+                                Next
+                            </button>
+
                         </div>
-                        <div class="blog-two-single">
-                            <div class="img-box">
-                                <img src="assets/images/blog/3_THE%20HOLY%20SPIRIt.jpg" alt="Image">
-                            </div>
-                            <div class="content-box">
-                                <div class="meta-box">
-                                    <div class="date-box">
-                                        <h3>07</h3>
-                                        <p>JULY 2025</p>
-                                    </div>
-                                    <ul class="meta-info list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                <span class="icon-user"></span>
-                                                JITHU JCS
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="title-box">
-                                    <h3>
-                                        <a href="holy-spirit">
-                                            HOLY SPIRIT</a>
-                                    </h3>
-                                </div>
 
-                                <div class="btn-box">
-                                    <a href="holy-spirit" class="thm-btn">
-                                        OPEN
-                                        <span class="icon-up-right-arrow"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
                 <div class="col-xl-4 col-lg-5">
                     <app-blog-side></app-blog-side>
                 </div>
+
             </div>
         </div>
     </section>
-<app-rim-section-a></app-rim-section-a>
+
+    <app-rim-section-a></app-rim-section-a>
     <app-rim-section-c></app-rim-section-c>
-    <!--Blog Details End-->
     <app-ipromise-footer></app-ipromise-footer>
+
 </div>

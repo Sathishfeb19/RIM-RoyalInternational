@@ -37,7 +37,7 @@ import { RimNotfoundComponent } from './rim-notfound/rim-notfound.component';
 
 export const routes: Routes = [
     { path: '', component: IpromiseHomeComponent, title: 'Home | Royal International Ministries - RIM' },
-    { path: 'jcs', component: RimJcsComponent, title: 'Jithu C.S | Royal International Ministries - RIM' },
+    { path: 'jcs', component: RimJcsComponent, title: 'JITHU CS | Royal International Ministries - RIM' },
     { path: 'apostolic', component: RimApostolicComponent, title: 'Apostolic | Royal International Ministries - RIM' },
     { path: 'prophetic', component: RimPropheticComponent, title: 'Prophetic | Royal International Ministries - RIM' },
     { path: 'ministry', component: RimMinistryComponent, title: 'Ministry | Royal International Ministries  -RIM' },
@@ -45,14 +45,15 @@ export const routes: Routes = [
     { path: 'message', component: RimMessageComponent, title: 'Message | Royal International Ministries - RIM' },
     { path: 'home', component: IpromiseHomeComponent, title: 'Home | Royal International Ministries - RIM' },
 
-    { path: 'the-genesis-of-jcs-in-the-name-of-jesus-christ', component: BlogAComponent, title: 'Jithu C.S | Royal International Ministries - RIM' },
+    { path: 'the-genesis-of-jcs-in-the-name-of-jesus-christ', component: BlogAComponent, title: 'JITHU CS | Royal International Ministries - RIM' },
     { path: 'the-prophetic', component: BlogBComponent, title: 'The Prophetic | Royal International Ministries - RIM' },
     { path: 'the-apostolic', component: BlogCComponent, title: 'The Apostolic | Royal International Ministries - RIM' },
     { path: 'world-prophecies', component: BlogDComponent, title: 'World Prophecies | Royal International Ministries - RIM' },
 
-    { path: 'abba-father', component: BlogEComponent, title: 'Abba Father | Royal International Ministries - RIM' },
-    { path: 'jesus-christ', component: BlogFComponent, title: 'Jesus Christ | Royal International Ministries - RIM' },
-    { path: 'holy-spirit', component: BlogGComponent, title: 'Holy Spirit | Royal International Ministries - RIM' },
+    // { path: 'abba-father', component: BlogEComponent, title: 'Abba Father | Royal International Ministries - RIM' },
+    // { path: 'jesus-christ', component: BlogFComponent, title: 'Jesus Christ | Royal International Ministries - RIM' },
+    // { path: 'holy-spirit', component: BlogGComponent, title: 'Holy Spirit | Royal International Ministries - RIM' },
+    { path: 'blog/:id', component: BlogGComponent, title: 'JCS Spirit | Royal International Ministries - RIM' },
 
     { path: 'supernatural', component: BlogJComponent, title: 'Supernatural | Royal International Ministries - RIM' },
     { path: 'superstars', component: BlogKComponent, title: 'Filmstars | Royal International Ministries - RIM' },
@@ -70,7 +71,7 @@ export const routes: Routes = [
 
     { path: 'mission-and-ministry', component: BlogHComponent, title: 'MISSION AND MINISTRY | Royal International Ministries - RIM' },
     { path: 'royal-international-ministries', component: BlogIComponent, title: 'RIM | Royal International Ministries - RIM' },
-    { path: 'jcs-rim', component: BlogZComponent, title: 'Jithu C.S | Royal International Ministries - RIM' },
+    { path: 'jcs-rim', component: BlogZComponent, title: 'JITHU CS | Royal International Ministries - RIM' },
     { path: 'the-kings-write', component: BlogUComponent, title: 'The Kings Write | Royal International Ministries - RIM' },
     { path: '**', component: RimNotfoundComponent, title: 'Page Not Found | Royal International Ministries - RIM' },
 

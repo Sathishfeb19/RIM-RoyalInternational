@@ -11,7 +11,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <!-- <link rel="manifest" href="assets/images/favicons/site.webmanifest" /> -->
-    <meta name="description" content="Royal International Ministries is the true revival of greater glory you are believing, praying and waiting for to save this world for Jesus." />
+    <meta name="description"
+        content="Royal International Ministries is the true revival of greater glory you are believing, praying and waiting for to save this world for Jesus." />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +68,6 @@
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/twentytwenty.css" />
-
     <script src="https://kit.fontawesome.com/3801882fa9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/module-css/slider.css" />
     <link rel="stylesheet" href="assets/css/module-css/footer.css" />
@@ -93,10 +93,16 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
-    <style>.icon-telephone:before {
-        content: "\e91f";
-        color: #9B870C;
-    }</style>
+    <style>
+        .icon-telephone:before {
+            content: "\e91f";
+            color: #9B870C;
+        }
+
+        #blogcontent{
+            text-align: justify;
+        }
+    </style>
 </head>
 
 <body>
@@ -122,11 +128,12 @@
                     <div class="sidebar-info-contents">
                         <div class="content-inner">
                             <div class="logo">
-                                <a href=""><img src="assets/images/resources/logo-1.png" style="height: 55px;" alt="" /></a>
+                                <a href=""><img src="assets/images/resources/logo-1.png" style="height: 55px;"
+                                        alt="" /></a>
                             </div>
                             <div class="content-box">
                                 <h4>About Us</h4>
-                                <p>Jithu C.S is a son of God and Royal International Ministries is anointed,
+                                <p>JITHU CS is a son of God and Royal International Ministries is anointed,
                                     consecrated, and sanctified to give God The Highest Praise in the
                                     name of Jesus Christ The King of kings and the Lord of lords. Amen. </p>
                             </div>
@@ -179,7 +186,7 @@
                     <i class="fa-solid fa-phone"></i>
                     <a href="tel:7034001777">+91 7034 001 777</a>
                 </li>
-            </ul><!-- /.mobile-nav__contact  jithucs7771@gmail.com--> 
+            </ul><!-- /.mobile-nav__contact  jithucs7771@gmail.com-->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="https://www.threads.net/@rimjcs">
@@ -188,11 +195,11 @@
                     <a href="https://www.instagram.com/rimjcs/"><i class="fab fa-instagram"
                             style="color: #9B870C;"></i></a>
 
-                    <a href="https://wa.me/917034001777?text= Hi RIM,"><i
-                            class="fab fa-whatsapp" style="color: #9B870C;"></i></a>
+                    <a href="https://wa.me/917034001777?text= Hi RIM,"><i class="fab fa-whatsapp"
+                            style="color: #9B870C;"></i></a>
                     <a href="#"><i class="fab fa-youtube" style="color: #9B870C;"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61577091874658"><i
-                            class="fab fa-facebook" style="color: #9B870C;"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61577091874658"><i class="fab fa-facebook"
+                            style="color: #9B870C;"></i></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
@@ -248,37 +255,37 @@
     <script src="assets/js/jquery.event.move.js"></script>
     <script src="assets/js/gsap/gsap.js"></script>
     <script src="assets/js/gsap/ScrollTrigger.js"></script>
- <script src="assets/js/gsap/SplitText.js"></script> 
- <script src="assets/js/gsap/ScrollTrigger.js"></script>
+    <script src="assets/js/gsap/SplitText.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.js"></script>
     <!-- template js -->
     <script src="assets/js/script.js"></script>
 
     <script>
         function copyCurrentURL(event) {
-          event.preventDefault();
-      
-          const url = window.location.href;
-          navigator.clipboard.writeText(url)
-            .then(() => {
-              showTooltip();
-            })
-            .catch(err => {
-              console.error("Failed to copy:", err);
-            });
+            event.preventDefault();
+
+            const url = window.location.href;
+            navigator.clipboard.writeText(url)
+                .then(() => {
+                    showTooltip();
+                })
+                .catch(err => {
+                    console.error("Failed to copy:", err);
+                });
         }
-      
+
         function showTooltip() {
-          const tooltip = document.getElementById("tooltip");
-          if (tooltip) {
-            tooltip.style.opacity = "1";
-      
-            setTimeout(() => {
-              tooltip.style.opacity = "0";
-            }, 1500);
-          }
+            const tooltip = document.getElementById("tooltip");
+            if (tooltip) {
+                tooltip.style.opacity = "1";
+
+                setTimeout(() => {
+                    tooltip.style.opacity = "0";
+                }, 1500);
+            }
         }
-      </script>
-      
+    </script>
+
 </body>
 
 </html>
